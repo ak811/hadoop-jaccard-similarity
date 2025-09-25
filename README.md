@@ -45,7 +45,7 @@ Outputs follow the required format:
 - **Reducer (`JaccardReducer`)**:
   - Loads cached doc sizes from Job 1.
   - Sums intersections for each pair to get `|A ∩ B|`.
-  - Computes \(J=\frac{|A\cap B|}{|A|+|B|-|A\cap B|}\) and rounds to **two decimals**.
+  - Computes $J=\frac{|A\cap B|}{|A|+|B|-|A\cap B|}$ and rounds to **two decimals**.
   - Emits `"A, B Similarity: 0.XX"`.
 
 ---
