@@ -10,9 +10,7 @@
 This project computes **Jaccard Similarity** between all pairs of documents using **Hadoop MapReduce**.  
 Given input lines of the form `DocumentID <text...>`, we tokenize and normalize each document into a **set of unique words**, then compute pairwise similarity:
 
-\[
-\mathrm{Jaccard}(A,B)=\frac{|A\cap B|}{|A\cup B|}
-\]
+$$\mathrm{Jaccard}(A,B)=\frac{|A\cap B|}{|A\cup B|}$$
 
 The pipeline runs in three MapReduce jobs:
 1. **Doc Sizes:** compute unique word counts per document.  
@@ -130,8 +128,6 @@ mvn -DskipTests clean package
 ---
 
 ## Running on Hadoop (Codespaces + Docker)
-
-> These are the exact commands I used. Absolute paths are used inside the container to avoid PATH issues.
 
 ### Option A — **3 DataNodes** (default compose)
 
@@ -269,14 +265,3 @@ Document1, Document14   Similarity: 0.11
     └── small|medium|large/output_jaccard/part-r-00000
 ```
 
----
-
-## Repro Checklist (what the grader can run quickly)
-
-1. `python3 datagen.py`  
-2. `mvn -DskipTests clean package`  
-3. **3-DN run:** `docker compose up -d` → copy jar/datasets → run all three datasets → save under `results-3dn/`  
-4. **1-DN run:** `docker compose -f docker-compose-single-datanode.yml up -d` → verify one DN → run all three → save under `results-1dn/`  
-5. `python3 compare_timings.py` → paste the table above (already included).
-
----
