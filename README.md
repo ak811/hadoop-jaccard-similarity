@@ -1,7 +1,4 @@
-# Assignment 2 — Document Similarity using MapReduce
-
-**Name:** Ali Rahimian  
-**Student ID:** 801371610
+# Jaccard Similarity using Hadoop MapReduce
 
 ---
 
