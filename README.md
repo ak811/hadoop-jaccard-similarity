@@ -1,4 +1,4 @@
-# Jaccard Similarity using Hadoop MapReduce
+# Jaccard Similarity with Hadoop MapReduce
 
 ---
 
