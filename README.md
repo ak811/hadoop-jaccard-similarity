@@ -1,4 +1,4 @@
-## Three-stage Hadoop MapReduce pairwise Jaccard similarity via inverted index, benchmarked on 1 vs 3 DataNodes
+## Hadoop MapReduce pairwise Jaccard similarity via inverted index, benchmarked on 1 vs 3 DataNodes
 
 A Java implementation of pairwise document similarity on Hadoop MapReduce. Each document is reduced to its set of unique normalized terms, and the pipeline computes the Jaccard similarity of every document pair that shares at least one term. Rather than comparing every document with every other document directly, it builds an inverted index, so work scales with actual term overlap. Document sizes are computed once, and set unions are derived by inclusion-exclusion. The pipeline runs on Dockerized Hadoop 3.2.1 clusters and is benchmarked on 1-DataNode and 3-DataNode configurations across three synthetic datasets.
 
